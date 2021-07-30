@@ -258,7 +258,7 @@ transforms_test = transform.Compose([
 ])
 train_data = MyDataset(txt='C:/Users/cyw/Desktop/c20201105/train.txt', transform=transforms)
 test_data = MyDataset(txt='C:/Users/cyw/Desktop/c20201105/test.txt', transform=transforms_test)
-# 然后就是调用DataLoader和刚刚创建的数据集，来创建dataloader，这里提一句，loader的长度是有多少个batch，所以和batch_size有关
+# 调用DataLoader和刚刚创建的数据集，来创建dataloader，loader的长度是有多少个batch，所以和batch_size有关
 train_loader = DataLoader(dataset=train_data, batch_size=8, shuffle=True)
 test_loader = DataLoader(dataset=test_data, batch_size=2, shuffle=False)
 print('num_of_trainData:', len(train_data))
